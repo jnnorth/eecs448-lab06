@@ -1,0 +1,10 @@
+file: buglist.txt
+author: Nick North
+date: 11-18-19
+
+Bugs List
+1. Valgrind finds memory leaks - 118 allocs and 13 frees. This means the destructor most likely doesn't deallocate every node.
+2. peekFront() returns element at the back of the queue instead of the front.
+3. dequeue() doesn't return the value of the front entry like the documentation says, it returns void.
+(This looks like the @return comment was meant to be removed since it's the same @return for peekFront())
+4. dequeue() seems to remove the value at the back of the queue, not the front
